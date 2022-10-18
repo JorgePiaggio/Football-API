@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/******* SHARED *******/
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  text-align: center;
+  padding: 2em 2em;
+  margin-bottom: 2em;
+}
+
+table{
+    margin: 2em 0 2em;
+}
+
+
+/******* HOME *******/
+.title {
+  margin: 10%;
+}
+
+.home-div h1 {
+color: red;
+}
+
+.home-div {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('./assets/img/NicePng_lawn-png_9418358.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+
+.home-img {
+  width: 40%;
+  height: auto;
+  margin: 2em auto 2em;
+  border-radius: 5%;
+}
+
+/******* COMPETITIONS *******/
+
+.competitions {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('./assets/img/75157-pull-close-up-wallpaper-material-computer-soccer.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+/******* PLAYERS *******/
+
+.competitions span{
+    color: red;
+}

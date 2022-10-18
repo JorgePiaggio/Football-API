@@ -1,0 +1,38 @@
+<div class="competitions">
+  <div class="container ">
+    <h3>Competitions</h3>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Code</th>
+          <th scope="col">Area</th>
+          <th scope="col">Emblem</th>
+          <th scope="col">Available Seasons</th>
+          <th scope="col">Season Id</th>
+          <th scope="col">Plan</th>
+          <th scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let competition of competitions; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ competition.id }}</td>
+          <td>{{ competition.name }}</td>
+          <td>{{ competition.code }}</td>
+          <td>{{ competition.area ? competition.area : 'N/A' }}</td>
+          <td><img src="{{ competition.emblem }}" class="me-2" style="width: 20px"></td>
+          <td>{{ competition.numberOfAvailableSeasons }}</td>
+          <td>{{ competition.seasonId }}</td>
+          <td>{{ competition.plan }}</td>
+          <td>{{ competition.type }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

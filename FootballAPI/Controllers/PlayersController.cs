@@ -24,6 +24,14 @@ namespace FootballAPI.Controllers
             return db.Players;
         }
 
+        [Route("api/players/Teamplayers")]
+        public async Task<IQueryable<Player>> GetTeamPlayersAsync(int id)
+        {
+            var response = db.Players.Where(x => x.TeamId == id);
+            await response.ForEachAsync(x => x.TeamName = db.Teams.Find(id).Name);
+            return response;
+        }
+
         // GET: api/Players/5
         [ResponseType(typeof(Player))]
         public async Task<IHttpActionResult> GetPlayer(int id)

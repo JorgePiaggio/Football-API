@@ -9,6 +9,8 @@ namespace FootballAPI.Models
     {
         public string Position { get; set; }
         public short ShirtNumber { get; set; }
+        public string TeamName { get; set; }
+        public int TeamId { get; set; }
         public Team Team { get; set; }
     }
 }

@@ -1,0 +1,28 @@
+<div class="competitions">
+  <div class="container ">
+    <h3><span>{{ currentTeam }}</span> Players</h3>
+
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Date Of Birth</th>
+          <th scope="col">Nationality</th>
+          <th scope="col">Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of players; index as i">
+          <td>{{ player.id }}</td>
+          <td>{{ player.firstName }}</td>
+          <td>{{ player.lastName }}</td>
+          <td>{{ player.dateOfBirth | date:'M/d/yyyy' }}</td>
+          <td>{{ player.nationality }}</td>
+          <td>{{ player.position }}</td>
+</tbody>
+    </table>
+
+  </div>
+</div>

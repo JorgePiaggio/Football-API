@@ -1,0 +1,32 @@
+<div class="competitions">
+  <div class="container ">
+    <h3>Teams</h3>
+
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Short Name</th>
+          <th scope="col">Tla</th>
+          <th scope="col">Crest</th>
+          <th scope="col">Address</th>
+          <th scope="col">Website</th>
+          <th scope="col">Founded</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of teams; index as i">
+          <td>{{ team.id }}</td>
+          <td><a [routerLink] = "['/players', team.id]">{{ team.name }} </a></td>
+          <td>{{ team.shortName }}</td>
+          <td>{{ team.tla }}</td>
+          <td><img src="{{ team.crest }}" class="me-2" style="width: 20px"></td>
+          <td>{{ team.address }}</td>
+          <td><a href="{{ team.website }}">Visit</a></td>
+          <td>{{ team.founded }}</td>
+      </tbody>
+    </table>
+
+  </div>
+</div>
